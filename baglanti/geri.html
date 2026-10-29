@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Sosyal Medyacı · bağlantı</title></head>
+<body style="margin:0;background:#0c0e10;color:#e9ecef;font:16px/1.5 -apple-system,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh">
+<div style="max-width:460px;padding:28px;text-align:center"><h1 style="font-size:20px">Sosyal Medyacı'ya dönülüyor…</h1>
+<p id="n" style="color:#8c96a0;font-size:14px">Bu sayfa izin kodunu bu Mac'teki Sosyal Medyacı paneline aktarır; kod başka hiçbir yere gönderilmez.</p></div>
+<script>
+(function () {
+  var hedef = "http://127.0.0.1:8770/oauth/geri" + window.location.search;
+  window.location.replace(hedef);
+  setTimeout(function () {
+    var n = document.getElementById("n");
+    n.textContent = "Otomatik dönülmediyse panelin bu Mac'te açık olduğundan emin ol ve ";
+    var a = document.createElement("a"); a.href = hedef; a.textContent = "buraya tıkla"; a.style.color = "#d8ab3a";
+    n.appendChild(a);
+  }, 2500);
+})();
+</script></body></html>
